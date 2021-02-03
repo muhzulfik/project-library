@@ -1,0 +1,124 @@
+{% extends 'crud/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="catalog py-5">
+  <div class="container-fluid bg-light">
+      <div class="row align-items-start py-5">
+        <h3 class="display-5 text-center fw-bold mb-5">Catalog.</h3>
+        <hr>
+          <div class="col-md-4 text-center text-md-left mb-5">
+            <h2 class="fw-bold">Add Data</h2>
+              <form action="" method="POST" id="">
+                {% csrf_token %}
+
+              <div class="form-group input-group my-3">
+                  {{form.lokasi}}
+              </div>
+              <div class="form-group input-group my-3">
+                  {{form.judul}}
+              </div>
+              <div class="form-group input-group my-3">
+                  {{form.penulis}}
+              </div>
+              <div class="form-group input-group my-3">
+                  {{form.katalog_jurusan}}
+              </div>
+              <div class="form-group input-group my-3">
+                  {{form.keyword}}
+              </div>
+              <div class="form-group input-group my-3">
+                  {{form.jumlah_buku}}
+              </div>
+              <div class="form-group input-group my-3">
+                  {{form.bahasa}}
+              </div>
+                  
+              <button type="submit" id="" class="btn btn-primary fw-bold">Submit</button>
+              </form>
+          </div>
+          <div class="col-md-8">
+            <h2 class="fw-bold text-center">List Catalog</h2>
+            <table class="table table-striped text-center" id="catalogTable">
+              <thead class="bg-info">
+                <tr>
+                  <th scope="col">Judul</th>
+                  <th scope="col">Penulis</th>
+                  <th scope="col">Lokasi</th>
+                  <th scope="col">Update</th>
+                  <th scope="col">Delete</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for catalog in catalogs %}
+                  <tr id="">
+                    <td>{{ catalog.judul }}</td>
+                    <td>{{ catalog.penulis }}</td>
+                    <td>{{ catalog.lokasi }}</td>
+                    <td>
+                      <a href="{% url 'pagecrud:catalogupdate' catalog.id %}" class="btn btn-sm btn-warning fw-bold"><i class="fa fa-edit"></i> Update</a>
+                    </td>
+                    <td>
+                      <a href="{% url 'pagecrud:catalogdelete' catalog.id %}" class="btn btn-sm btn-danger fw-bold"><i class="fa fa-trash-alt"></i> Delete</a>
+                    </td>
+                  </tr>
+                {% empty %}
+                  <tr>
+                    <td colspan="8" class="text-center bg-warning">No book</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+            {% if is_paginated %}
+
+                        <nav aria-label="journalPage" class="my-5">
+                            <ul class="pagination" class="justify-content-center" style="justify-content: center!important;">
+                            
+                                {% if page_obj.has_previous %}
+                                    <li class="page-item">
+                                        <a class="page-link" href="{{ request.path }}?page={{ page_obj.previous_page_number }}">Previous</a>
+                                    </li>
+                                {% else %}
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#">Previous</a>
+                                    </li>
+                                {% endif %}
+
+                                
+                                {% for page in paginator.page_range %}
+                                    
+                                    {% if page is page_obj.number %}
+                                            <li class="page-item active" aria-current="page">
+                                                <span class="page-link" href="#">{{page}}</span>
+                                            </li>
+                                    {% else %}
+                                        <li class="page-item">
+                                            <a class="page-link" href="?page={{ page }}">{{page}}</a>
+                                        </li>
+                                    {% endif %}
+                                    
+                                {% endfor %}
+                                
+                                {% if page_obj.has_next %}
+                                    <li class="page-item">
+                                        <a class="page-link" href="{{ request.path }}?page={{ page_obj.next_page_number }}">Next</a>
+                                    </li>
+                                {% else %}
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </nav>
+                    {% endif %}
+          </div>
+      </div>
+  </div>
+</section>
+
+{% endblock content %}
+
+{% block javascript %}
+  
+{% endblock javascript %}
+        

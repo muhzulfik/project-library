@@ -1,0 +1,58 @@
+{% extends 'crud/base.html' %}
+
+
+{% block content %}
+<section class="index" id="particles-js">
+    <div class="container-fluid container position-absolute form-content">
+        <div class="row justify-content-center text-white">
+            <h5 class="display-4 mx-auto fw-bold">Hello {{user}}!</h5>
+            <h5 class="display-5 fw-bold">Happy Working and Have a Nice Day!</h5>
+            <div class="col pt-5">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <input type="submit" value="Logout" name="logout" class="btn btn-danger fw-bold">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.align-items-center {
+    align-items: center !important;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.index {
+    background: #004B84!important;
+}
+
+.index .form-content  {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+#particles-js {
+    position:relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-height: 100%;
+    min-height: 100vh !important;
+}
+</style>
+{% endblock content %}
+    

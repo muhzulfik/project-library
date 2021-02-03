@@ -1,0 +1,36 @@
+.bg-light {
+    background-color: #fff !important;
+}
+
+.nav-item .btn {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.nav-link {
+    color: #004B84!important;
+    border-bottom: 0.5px solid transparent !important;
+}
+
+.nav-link:hover {
+    border-bottom: 0.5px solid #004B84!important;
+}
+
+.navbar-nav {
+    font-family: 'Roboto', sans-serif;
+}
+
+.dropdown-menu {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.dropdown-item {
+    color: #004B84!important;
+    background-color: transparent;
+    border-bottom: 0.5px solid transparent !important;
+}
+
+.dropdown-item:hover {
+    border-bottom: 0.5px solid #004B84!important;
+    background: transparent;
+}

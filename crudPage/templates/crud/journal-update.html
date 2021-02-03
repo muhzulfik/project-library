@@ -1,0 +1,70 @@
+{% extends 'crud/base.html' %}
+
+
+{% block content %}
+<section class="catalog py-5">
+    <div class="container-fluid bg-light">
+        <div class="row align-items-start py-5">
+          <h3 class="display-5 text-center fw-bold mb-5">Journal.</h3>
+          <hr>
+            <div class="col-md-6">
+                <h2 class="display-5">
+                    Journal Update.
+                </h2>       
+            </div>
+            <div class="col-md-6 text-center text-md-left mb-5">
+                <form action="" method="POST" id="addJournal">
+                  {% csrf_token %}
+                
+                    <div class="form-group input-group my-3">
+                      {{form.judul_artikel}}
+                    </div>
+                    <div class="form-group input-group my-3">
+                      {{form.judul_terbitan}}
+                    </div>
+                    <div class="form-group input-group my-3">
+                      {{form.issn}}
+                    </div>
+                    <div class="form-group input-group my-3">
+                      {{form.bahasa}}
+                    </div>
+                    <div class="form-group input-group my-3">
+                      {{form.tempat_terbit}}
+                    </div>
+                    <div class="form-group input-group my-3">
+                      {{form.tahun}}
+                    </div>
+                    <div class="form-group input-group my-3">
+                      {{form.volume}}
+                    </div>
+                    <div class="form-group input-group my-3">
+                      {{form.penerbit}}
+                    </div>
+                    <div class="form-group input-group my-3">
+                        {{form.frekuensi_penerbitan}}
+                    </div>
+                    <div class="form-group input-group my-3">
+                        {{form.penulis}}
+                    </div>
+                    <div class="form-group input-group my-3">
+                        {{form.abstraksi}}
+                    </div>
+                    <div class="form-group input-group my-3">
+                        {{form.kata_kunci}}
+                    </div>
+                    <div class="form-group input-group my-3">
+                        {{form.lokasi}}
+                    </div>
+                    <div class="form-group input-group my-3">
+                        {{form.terakreditasi}}
+                    </div>
+                
+                    
+                <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+    
