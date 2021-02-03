@@ -6,14 +6,14 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{% static 'img/logo uhamka.png' %}">
+    <link rel="icon" href="{% static 'img/logouhamka.png' %}">
     <title>Login Perpustakaan</title>
-    <link rel="stylesheet" href="{% static 'css/style_admin_perpus.css' %}">
+    <link rel="stylesheet" href="{% static 'staff/css/style_admin_perpus.css' %}">
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-    
 
 </head>
 <body>
+
     <div class="container">
 
         <div class="forms-container">
@@ -21,11 +21,11 @@
 
             <form action="" method="POST" class="sign-in-form">
               {% csrf_token %}
-              <h2 class="title">Masuk</h2>
-              <input type="text" id="username" name="username">
-              <input type="password" id="password" name="password">
+              <h2 class="title">Login</h2>
+              <input type="text" id="username"  name="username" placeholder="Username">
+              <input type="password" id="password" name="password" placeholder="Password">
 
-              <button type="submit" class="btn btn-success">Masuk</button>
+              <button type="submit" class="btn btn-success">Login</button>
               <p class="social-text">Laman ini dikhususkan untuk Admin Perpustakaan</p>
             </form>
   
