@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'petunjuk',
     'layanan',
     'crudPage',
-    'pagestaff'
+    'pagestaff',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
