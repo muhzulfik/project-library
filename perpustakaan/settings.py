@@ -24,7 +24,7 @@ SECRET_KEY = 'sucnqan!#%+d*0$^n57zfm(x6ov^$+duj2dflwicfbb(xj0%)_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'library-uhamka.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', '']
 
 
 # Application definition
