@@ -22,9 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'sucnqan!#%+d*0$^n57zfm(x6ov^$+duj2dflwicfbb(xj0%)_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pacific-wave-88136.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
