@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 import os
+import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -24,7 +25,7 @@ SECRET_KEY = 'sucnqan!#%+d*0$^n57zfm(x6ov^$+duj2dflwicfbb(xj0%)_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','library-uhamka.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','https://library-uhamka.herokuapp.com/']
 
 
 # Application definition
@@ -135,3 +136,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+django_heroku.settings(locals())

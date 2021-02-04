@@ -1,1 +1,1 @@
-web: gunicorn perpustakaan.wsgi
+web: gunicorn perpustakaan.wsgi --log-file -
