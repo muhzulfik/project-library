@@ -16,17 +16,17 @@
                 <form action="" method="GET">
                     {% csrf_token %}
 
-                  <div class="form-group input-group my-3">
+                  <div class="form-group input-group input-keyword my-3">
                       {{form.judul}}
                   </div>
-                  <div class="form-group input-group my-3">
+                  <div class="form-group input-group input-keyword my-3">
                       {{form.penulis}}
                   </div>
-                  <div class="form-group input-group my-3">
+                  <div class="form-group input-group input-keyword my-3">
                       {{form.keyword}}
                   </div>
                       
-                  <button class="btn btn-primary">Search</button>
+                  <button class="btn btn-primary search-button">Search</button>
                   <button class="btn btn-primary">Reset</button>
                 </form>
             </div>
@@ -94,5 +94,6 @@
         </div>
     </div>
 </section>
+
 {% endblock contents %}
     

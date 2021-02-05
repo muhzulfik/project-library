@@ -27,7 +27,7 @@ class catalog(models.Model):
                 ('fisika','Fisika'),
                 ('ekonomi','Ekonomi'),
                 ('akuntansi','Akuntansi'),
-                ('pendidikan guru sekolah daser','Pendidikan Guru Sekolah Dasar'),
+                ('pendidikan guru sekolah dasar','Pendidikan Guru Sekolah Dasar'),
                 ('sastra indonesia','Sasta Indonesia'),
                 ('sastra inggris','Sastra Inggris'),
                 ('ilmu politik','Ilmu Politik'),
