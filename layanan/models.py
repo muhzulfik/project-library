@@ -39,10 +39,10 @@ class catalog(models.Model):
     )
 
     lokasi = models.CharField(max_length=200, choices=LOKASI, default='semua lokasi')
-    judul = models.CharField(max_length=200, blank=True)
+    judul = models.TextField(blank=True)
     penulis = models.CharField(max_length=200, blank=True)
     katalog_jurusan = models.CharField(max_length=200, choices=KATALOG_JURUSAN, default='psikologi')
-    keyword = models.CharField(max_length=200, null=True, blank=True)
+    keyword = models.TextField(null=True, blank=True)
     jumlah_buku = models.IntegerField()
     bahasa = models.CharField(max_length=200, null=True, choices=BAHASA, default='indonesia')
 
