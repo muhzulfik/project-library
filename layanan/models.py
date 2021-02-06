@@ -39,10 +39,10 @@ class catalog(models.Model):
     )
 
     lokasi = models.CharField(max_length=200, choices=LOKASI, default='semua lokasi')
-    judul = models.TextField(blank=True)
+    judul = models.CharField(max_length=200, blank=True)
     penulis = models.CharField(max_length=200, blank=True)
     katalog_jurusan = models.CharField(max_length=200, choices=KATALOG_JURUSAN, default='psikologi')
-    keyword = models.TextField(null=True, blank=True)
+    keyword = models.CharField(max_length=200, null=True, blank=True)
     jumlah_buku = models.IntegerField()
     bahasa = models.CharField(max_length=200, null=True, choices=BAHASA, default='indonesia')
 
@@ -65,8 +65,8 @@ class journal(models.Model):
         ('english','English')
     )
 
-    judul_artikel   = models.TextField(blank=True)
-    judul_terbitan  = models.TextField()
+    judul_artikel   = models.CharField(max_length=200, blank=True)
+    judul_terbitan  = models.CharField(max_length=200)
     issn            = models.IntegerField(blank=True)
     bahasa          = models.CharField(max_length=200, choices=BAHASA, default='indonesia')
     tempat_terbit   = models.CharField(max_length=200)
@@ -76,10 +76,10 @@ class journal(models.Model):
     frekuensi_penerbitan = models.CharField(max_length=200)
     penulis         = models.CharField(max_length=200, blank=True)
     abstraksi       = models.TextField()
-    kata_kunci      = models.TextField(blank=True)
+    kata_kunci      = models.CharField(max_length=200, blank=True)
     lokasi          = models.CharField(max_length=200, blank=True, choices=LOKASI, default='semua lokasi')
     terakreditasi   = models.CharField(max_length=200)
-    slug            = models.SlugField(blank=True, editable=False)
+    slug            = models.SlugField(blank=True, editable=False, max_length=200)
 
     def save(self):
         self.slug = slugify(self.judul_artikel)
@@ -113,14 +113,14 @@ class repository(models.Model):
                 ('pascasarjana','Pascasarjana')  
             )
 
-    judul           = models.TextField(blank=True)
+    judul           = models.CharField(max_length=200, blank=True)
     penulis         = models.CharField(max_length=200, blank=True)
     abstraksi       = models.TextField()
-    keyword         = models.TextField(null=True, blank=True)
+    keyword         = models.CharField(max_length=200, null=True, blank=True)
     pembimbing      = models.CharField(max_length=200)
     jenis_penulisan = models.CharField(max_length=200, choices=JENIS_PENULISAN, default='semua penulisan')
     lokasi          = models.CharField(max_length=200, choices=LOKASI, default='semua fakultas')
-    slug            = models.SlugField(blank=True, editable=False)
+    slug            = models.SlugField(blank=True, editable=False, max_length=200)
 
 
     def __str__(self):
