@@ -24,7 +24,7 @@ SECRET_KEY = 'sucnqan!#%+d*0$^n57zfm(x6ov^$+duj2dflwicfbb(xj0%)_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1','library-uhamka.herokuapp.com']
 
 
 # Application definition
@@ -79,16 +79,9 @@ WSGI_APPLICATION = 'perpustakaan.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-
     'default': {
-        'ENGINE': 'djongo',
-        'CLIENT': {
-            'host': "mongodb+srv://takoyachim:takoyakienak123@cluster0.ctq8w.mongodb.net/perpustakaan?retryWrites=true&w=majority",
-            'username': 'takoyachim',
-            'name' : 'perpustakaan',
-            'password': 'takoyakienak123',
-            'port': 27017,
-        },   
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
