@@ -22,9 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'sucnqan!#%+d*0$^n57zfm(x6ov^$+duj2dflwicfbb(xj0%)_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['library-uhamka.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -84,7 +84,9 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME': 'perpustakaan',
         'CLIENT': {
-            'host': "mongodb+srv://takoyachim:takoyakienak123@cluster0.ctq8w.mongodb.net/perpustakaan?retryWrites=true&w=majority"
+            'host': "mongodb+srv://takoyachim:takoyakienak123@cluster0.ctq8w.mongodb.net/perpustakaan?retryWrites=true&w=majority",
+            'username': 'takoyachim',
+            'password': 'takoyakienak123',
         },   
     }
 }
