@@ -24,8 +24,8 @@ class journalForm(forms.ModelForm):
         fields = '__all__'
 
         widgets = {
-            'judul_artikel' : forms.TextInput({'class':'form-control', 'type':'search','name':'judul_artikel', 'placeholder':'Judul Artikel'}),
-            'judul_terbitan' : forms.TextInput({'class':'form-control', 'type':'search','name':'judul_terbitan', 'placeholder':'Judul Terbitan'}),
+            'judul_artikel' : forms.TextInput({'class':'form-control', 'type':'text','name':'judul_artikel', 'placeholder':'Judul Artikel'}),
+            'judul_terbitan' : forms.TextInput({'class':'form-control', 'type':'text','name':'judul_terbitan', 'placeholder':'Judul Terbitan'}),
             'issn' : forms.NumberInput({'class':'form-control', 'type':'search','name':'issn', 'placeholder':'ISSN'}),
             'bahasa' : forms.Select({'class':'form-select', 'type':'search','name':'bahasa', 'placeholder':'Bahasa'}),
             'tempat_terbit' : forms.TextInput({'class':'form-control', 'type':'search','name':'tempat_terbit', 'placeholder':'Tempat Terbit'}),
@@ -33,9 +33,9 @@ class journalForm(forms.ModelForm):
             'volume' : forms.TextInput({'class':'form-control', 'type':'search','name':'volume', 'placeholder':'Volume'}),
             'penerbit' : forms.TextInput({'class':'form-control', 'type':'search','name':'penerbit', 'placeholder':'Penerbit'}),
             'frekuensi_penerbitan' : forms.TextInput({'class':'form-control', 'type':'search','name':'frekuensi_penerbitan', 'placeholder':'Frekuensi Penerbitan'}),
-            'abstraksi' : forms.Textarea({'class':'form-control', 'type':'search','name':'abstraksi', 'placeholder':'Abstraksi'}),
+            'abstraksi' : forms.Textarea({'class':'form-control', 'type':'text','name':'abstraksi', 'placeholder':'Abstraksi'}),
             'terakreditasi' : forms.TextInput({'class':'form-control', 'type':'search','name':'terakreditasi', 'placeholder':'Terakreditasi'}),
-            'kata_kunci' : forms.TextInput({'class':'form-control', 'type':'search','name':'kata_kunci', 'placeholder':'Keyword'}),
+            'kata_kunci' : forms.TextInput({'class':'form-control', 'type':'text','name':'kata_kunci', 'placeholder':'Keyword'}),
             'penulis' : forms.TextInput({'class':'form-control', 'type':'search','name':'penulis', 'placeholder':'Penulis'}),
             'lokasi' : forms.Select({'class':'form-select', 'type':'search','name':'lokasi', 'placeholder':'Lokasi'}),
         }
