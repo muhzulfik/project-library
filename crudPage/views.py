@@ -10,7 +10,7 @@ def index(request):
     context = {
         'title':'Page Crud',
     }
-
+    
     if request.method == "POST":
         if request.POST['logout'] == 'Submit':
             logout(request)

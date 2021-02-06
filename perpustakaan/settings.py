@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 import os
-import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -83,17 +82,9 @@ DATABASES = {
 
     'default': {
 
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-
-        'NAME': 'dfqp6pkd5jk87c',
-
-        'USER': 'pddkbunvxwkibt',
-
-        'PASSWORD': '410b2b371a3e84351aac2df77424090ffc078d769e57d50bd57bf0e79a13a091',
-
-        'HOST': 'ec2-18-204-101-137.compute-1.amazonaws.com',
-
-        'PORT': '5432',
+        'ENGINE': 'djongo',
+        
+        'NAME': 'perpustakaan',
 
     }
 
