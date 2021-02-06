@@ -79,12 +79,24 @@ WSGI_APPLICATION = 'perpustakaan.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
 
+    'default': {
+
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+        'NAME': 'dfqp6pkd5jk87c',
+
+        'USER': 'pddkbunvxwkibt',
+
+        'PASSWORD': '410b2b371a3e84351aac2df77424090ffc078d769e57d50bd57bf0e79a13a091',
+
+        'HOST': 'ec2-18-204-101-137.compute-1.amazonaws.com',
+
+        'PORT': '5432',
+
+    }
+
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
