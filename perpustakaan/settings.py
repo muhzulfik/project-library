@@ -87,6 +87,7 @@ DATABASES = {
             'username': 'takoyachim',
             'name' : 'perpustakaan',
             'password': 'takoyakienak123',
+            'port': 27017,
         },   
     }
 }
