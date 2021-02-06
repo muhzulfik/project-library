@@ -85,7 +85,7 @@ DATABASES = {
         'USER': 'yuezhrttuoevzf',
         'PASSWORD': '29214bcae281a4bf2a2abac7529b26635e3cb787120af56ff532505ec6a64970',
         'HOST': 'ec2-34-230-167-186.compute-1.amazonaws.com',
-        'PORT': '5432',                      # Set to empty string for default.
+        'PORT': 5432,
     }
 }
 
