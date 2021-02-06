@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'perpustakaan.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'perpustakaan',                     
+        'NAME': 'd64qnlmgahiilj',                     
         'USER': 'yuezhrttuoevzf',
         'PASSWORD': '29214bcae281a4bf2a2abac7529b26635e3cb787120af56ff532505ec6a64970',
         'HOST': 'ec2-34-230-167-186.compute-1.amazonaws.com',
@@ -89,9 +89,6 @@ DATABASES = {
     }
 }
 
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
