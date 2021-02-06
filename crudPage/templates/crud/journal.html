@@ -14,6 +14,9 @@
                   {% csrf_token %}
                 
                     <div class="form-group input-group my-3">
+                      {{form.lokasi}}
+                    </div>
+                    <div class="form-group input-group my-3">
                       {{form.judul_artikel}}
                     </div>
                     <div class="form-group input-group my-3">
@@ -48,9 +51,6 @@
                     </div>
                     <div class="form-group input-group my-3">
                         {{form.kata_kunci}}
-                    </div>
-                    <div class="form-group input-group my-3">
-                        {{form.lokasi}}
                     </div>
                     <div class="form-group input-group my-3">
                         {{form.terakreditasi}}

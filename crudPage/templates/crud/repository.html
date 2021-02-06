@@ -12,7 +12,13 @@
                 <form action="" method="POST" id="addRepository">
                   {% csrf_token %}
                 
-                    <div class="form-group input-group my-3">
+                  <div class="form-group input-group my-3">
+                    {{form.jenis_penulisan}}
+                  </div>
+                  <div class="form-group input-group my-3">
+                    {{form.lokasi}}
+                  </div>  
+                  <div class="form-group input-group my-3">
                       {{form.judul}}
                     </div>
                     <div class="form-group input-group my-3">
@@ -26,12 +32,6 @@
                     </div>
                     <div class="form-group input-group my-3">
                       {{form.pembimbing}}
-                    </div>
-                    <div class="form-group input-group my-3">
-                      {{form.jenis_penulisan}}
-                    </div>
-                    <div class="form-group input-group my-3">
-                      {{form.lokasi}}
                     </div>            
                     
                     <button type="submit" class="btn btn-primary">Submit</button>
