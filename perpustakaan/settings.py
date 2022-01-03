@@ -19,10 +19,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'sucnqan!#%+d*0$^n57zfm(x6ov^$+duj2dflwicfbb(xj0%)_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+ALLOWED_HOSTS = ['127.0.0.1','library-uhamka.herokuapp.com']
 
 # Application definition
 
@@ -74,7 +76,16 @@ WSGI_APPLICATION = 'perpustakaan.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd64qnlmgahiilj',                     
+        'USER': 'yuezhrttuoevzf',
+        'PASSWORD': '29214bcae281a4bf2a2abac7529b26635e3cb787120af56ff532505ec6a64970',
+        'HOST': 'ec2-34-230-167-186.compute-1.amazonaws.com',
+        'PORT': 5432,
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
